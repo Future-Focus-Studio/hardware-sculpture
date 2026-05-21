@@ -69,6 +69,7 @@ export interface BomLine {
   subtotal: number;
   material: Material;
   mcmasterUrl: string;
+  priceUrl: string;
 }
 
 export interface Sculpture {

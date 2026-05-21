@@ -381,6 +381,7 @@ function buildBom(allParts: Part[]): BomLine[] {
       subtotal: Math.round(part.unitPrice * qty * 100) / 100,
       material: part.material,
       mcmasterUrl: part.mcmasterUrl,
+      priceUrl: `https://www.mcmaster.com/${part.partNumber}`,
     }))
     .sort((a, b) => b.subtotal - a.subtotal);
 }

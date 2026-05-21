@@ -3,6 +3,7 @@ import path from "node:path";
 import fs from "node:fs";
 import { generateSculpture, catalogSize } from "./generator";
 import { CATALOG } from "./catalog";
+import { fetchRealPrice } from "./mcmaster";
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3001;
@@ -18,6 +19,16 @@ app.get("/api/catalog", (_req: Request, res: Response) => {
 app.get("/api/generate", (_req: Request, res: Response) => {
   const sculpture = generateSculpture();
   res.json(sculpture);
+});
+
+app.get("/api/price/:partNumber", async (req: Request, res: Response) => {
+  const { partNumber } = req.params;
+  try {
+    const price = await fetchRealPrice(partNumber);
+    res.json({ partNumber, price, currency: "USD" });
+  } catch {
+    res.json({ partNumber, price: null });
+  }
 });
 
 // Serve built client in production.
