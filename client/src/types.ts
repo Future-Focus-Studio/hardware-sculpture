@@ -1,13 +1,24 @@
-// Mirror of server/types.ts — kept in sync manually for V0.1.
+// Mirror of server/types.ts — kept in sync manually.
 export type Category =
   | "threaded_rod"
   | "hex_nut"
   | "coupling_nut"
   | "acorn_nut"
   | "standoff"
+  | "thumb_screw"
+  | "wing_nut"
+  | "flange_nut"
+  | "eye_bolt"
+  | "t_nut"
+  | "jam_nut"
   | "pipe_nipple"
+  | "barrel_nipple"
   | "pipe_coupling"
-  | "pipe_cap";
+  | "pipe_cap"
+  | "pipe_plug"
+  | "pipe_tee"
+  | "pipe_elbow"
+  | "pipe_cross";
 
 export type ThreadType = "M8" | "1/4-NPT";
 
@@ -34,10 +45,20 @@ export interface Part {
   mcmasterUrl: string;
 }
 
-export interface PlacedPart {
+export type Side = "top" | "bottom" | "left" | "right";
+
+export interface SculptureNode {
   part: Part;
-  yOffset: number;
-  occupies: number;
+  x: number;
+  y: number;
+  rotation: number;
+  connectionSide: Side;
+  children: SculptureChild[];
+}
+
+export interface SculptureChild {
+  parentSide: Side;
+  node: SculptureNode;
 }
 
 export interface BomLine {
@@ -54,12 +75,11 @@ export interface Sculpture {
   id: string;
   createdAt: string;
   threadSystem: ThreadType;
-  spine: PlacedPart[];
-  fittings: PlacedPart[];
+  root: SculptureNode;
   bom: BomLine[];
   totals: {
     partCount: number;
     totalCost: number;
-    heightMm: number;
+    spanMm: number;
   };
 }

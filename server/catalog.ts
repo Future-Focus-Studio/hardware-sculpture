@@ -3,12 +3,14 @@ import type { Part } from "./types";
 // Hardcoded catalog of real McMaster-Carr-style parts.
 // Part numbers follow McMaster's NNNNN[A-Z]NNN format. Prefix series are drawn
 // from McMaster conventions (90591A = metric hex nuts, 92510A = threaded rods,
-// 93475A = round standoffs, 94639A = coupling nuts, 4452K = NPT pipe fittings).
+// 93475A = round standoffs, 94639A = coupling nuts, 4452K / 4429K = NPT pipe
+// fittings, 96754A = flange nuts, 90975A = T-nuts, 90710A = jam nuts,
+// 91746A = thumb screws, 90866A = wing nuts, 3014T = eye bolts).
 // Specific part numbers should be verified against mcmaster.com before ordering.
 const mcm = (n: string) => `https://www.mcmaster.com/${n}`;
 
 export const CATALOG: Part[] = [
-  // ---- M8 threaded rods (the "spine") ----
+  // ---- M8 threaded rods ----
   {
     partNumber: "92510A816",
     name: "Low-Strength Steel Threaded Rod, M8 x 1.25, 100 mm Long",
@@ -129,7 +131,7 @@ export const CATALOG: Part[] = [
     mcmasterUrl: mcm("92671A170"),
   },
 
-  // ---- M8 coupling / acorn / decorative ----
+  // ---- M8 coupling nuts ----
   {
     partNumber: "94639A300",
     name: "Zinc-Plated Steel Coupling Nut, M8 x 1.25, 24 mm Long",
@@ -144,6 +146,34 @@ export const CATALOG: Part[] = [
     mcmasterUrl: mcm("94639A300"),
   },
   {
+    partNumber: "94639A330",
+    name: "Brass Coupling Nut, M8 x 1.25, 30 mm Long",
+    category: "coupling_nut",
+    threadType: "M8",
+    threadSize: "M8 x 1.25",
+    material: "brass",
+    finish: "plain",
+    height: 30,
+    diameter: 13,
+    unitPrice: 2.84,
+    mcmasterUrl: mcm("94639A330"),
+  },
+  {
+    partNumber: "94639A340",
+    name: "18-8 Stainless Steel Coupling Nut, M8 x 1.25, 40 mm Long",
+    category: "coupling_nut",
+    threadType: "M8",
+    threadSize: "M8 x 1.25",
+    material: "stainless",
+    finish: "passivated",
+    height: 40,
+    diameter: 13,
+    unitPrice: 3.62,
+    mcmasterUrl: mcm("94639A340"),
+  },
+
+  // ---- M8 acorn / decorative ----
+  {
     partNumber: "97803A410",
     name: "Stainless Steel Acorn Cap Nut, M8 x 1.25",
     category: "acorn_nut",
@@ -157,7 +187,7 @@ export const CATALOG: Part[] = [
     mcmasterUrl: mcm("97803A410"),
   },
 
-  // ---- M8 round standoffs / spacers ----
+  // ---- M8 round standoffs ----
   {
     partNumber: "93475A140",
     name: "Aluminum Round Standoff, M8 Threaded, 10 mm Long",
@@ -224,7 +254,175 @@ export const CATALOG: Part[] = [
     mcmasterUrl: mcm("93475A260"),
   },
 
-  // ---- 1/4" NPT pipe parts (for occasional alternative spine) ----
+  // ---- M8 knurled thumb screws (terminal — flat broad head) ----
+  {
+    partNumber: "91746A220",
+    name: "Brass Knurled-Head Thumb Screw, M8 x 1.25, 16 mm Long",
+    category: "thumb_screw",
+    threadType: "M8",
+    threadSize: "M8 x 1.25",
+    material: "brass",
+    finish: "plain",
+    height: 24, // total visual height incl. head
+    diameter: 18, // head diameter
+    unitPrice: 3.42,
+    mcmasterUrl: mcm("91746A220"),
+  },
+  {
+    partNumber: "91746A230",
+    name: "18-8 Stainless Steel Knurled-Head Thumb Screw, M8 x 1.25, 20 mm Long",
+    category: "thumb_screw",
+    threadType: "M8",
+    threadSize: "M8 x 1.25",
+    material: "stainless",
+    finish: "polished",
+    height: 28,
+    diameter: 20,
+    unitPrice: 4.88,
+    mcmasterUrl: mcm("91746A230"),
+  },
+
+  // ---- M8 wing nuts (terminal — butterfly silhouette) ----
+  {
+    partNumber: "90866A110",
+    name: "Zinc-Plated Steel Wing Nut, M8 x 1.25",
+    category: "wing_nut",
+    threadType: "M8",
+    threadSize: "M8 x 1.25",
+    material: "zinc",
+    finish: "zinc plated",
+    height: 11,
+    diameter: 28, // wing-tip to wing-tip
+    unitPrice: 0.74,
+    mcmasterUrl: mcm("90866A110"),
+  },
+  {
+    partNumber: "94895A800",
+    name: "18-8 Stainless Steel Wing Nut, M8 x 1.25",
+    category: "wing_nut",
+    threadType: "M8",
+    threadSize: "M8 x 1.25",
+    material: "stainless",
+    finish: "passivated",
+    height: 12,
+    diameter: 30,
+    unitPrice: 1.96,
+    mcmasterUrl: mcm("94895A800"),
+  },
+
+  // ---- M8 flange nuts (wide-base) ----
+  {
+    partNumber: "96754A150",
+    name: "Zinc-Plated Steel Serrated Flange Nut, M8 x 1.25",
+    category: "flange_nut",
+    threadType: "M8",
+    threadSize: "M8 x 1.25",
+    material: "zinc",
+    finish: "zinc plated",
+    height: 9,
+    diameter: 19, // flange OD
+    unitPrice: 0.42,
+    mcmasterUrl: mcm("96754A150"),
+  },
+  {
+    partNumber: "96754A160",
+    name: "18-8 Stainless Steel Serrated Flange Nut, M8 x 1.25",
+    category: "flange_nut",
+    threadType: "M8",
+    threadSize: "M8 x 1.25",
+    material: "stainless",
+    finish: "passivated",
+    height: 9,
+    diameter: 19,
+    unitPrice: 1.18,
+    mcmasterUrl: mcm("96754A160"),
+  },
+
+  // ---- M8 eye bolts (terminal — loop visual) ----
+  {
+    partNumber: "3014T11",
+    name: "Zinc-Plated Steel Eye Bolt, M8 x 1.25, 30 mm Long",
+    category: "eye_bolt",
+    threadType: "M8",
+    threadSize: "M8 x 1.25",
+    material: "zinc",
+    finish: "zinc plated",
+    length: 52, // includes loop
+    diameter: 18, // loop OD
+    unitPrice: 1.92,
+    mcmasterUrl: mcm("3014T11"),
+  },
+  {
+    partNumber: "3014T21",
+    name: "18-8 Stainless Steel Eye Bolt, M8 x 1.25, 40 mm Long",
+    category: "eye_bolt",
+    threadType: "M8",
+    threadSize: "M8 x 1.25",
+    material: "stainless",
+    finish: "passivated",
+    length: 66,
+    diameter: 20,
+    unitPrice: 4.86,
+    mcmasterUrl: mcm("3014T21"),
+  },
+
+  // ---- M8 T-nuts ----
+  {
+    partNumber: "90975A100",
+    name: "Zinc-Plated Steel T-Nut, M8 x 1.25",
+    category: "t_nut",
+    threadType: "M8",
+    threadSize: "M8 x 1.25",
+    material: "zinc",
+    finish: "zinc plated",
+    height: 11,
+    diameter: 22, // flange OD
+    unitPrice: 0.36,
+    mcmasterUrl: mcm("90975A100"),
+  },
+  {
+    partNumber: "90975A110",
+    name: "18-8 Stainless Steel T-Nut, M8 x 1.25",
+    category: "t_nut",
+    threadType: "M8",
+    threadSize: "M8 x 1.25",
+    material: "stainless",
+    finish: "passivated",
+    height: 11,
+    diameter: 22,
+    unitPrice: 1.14,
+    mcmasterUrl: mcm("90975A110"),
+  },
+
+  // ---- M8 jam nuts (thin) ----
+  {
+    partNumber: "90710A140",
+    name: "Zinc-Plated Steel Jam Nut, M8 x 1.25 (Thin)",
+    category: "jam_nut",
+    threadType: "M8",
+    threadSize: "M8 x 1.25",
+    material: "zinc",
+    finish: "zinc plated",
+    height: 4,
+    diameter: 13,
+    unitPrice: 0.16,
+    mcmasterUrl: mcm("90710A140"),
+  },
+  {
+    partNumber: "90710A150",
+    name: "18-8 Stainless Steel Jam Nut, M8 x 1.25 (Thin)",
+    category: "jam_nut",
+    threadType: "M8",
+    threadSize: "M8 x 1.25",
+    material: "stainless",
+    finish: "passivated",
+    height: 4,
+    diameter: 13,
+    unitPrice: 0.52,
+    mcmasterUrl: mcm("90710A150"),
+  },
+
+  // ---- 1/4" NPT pipe nipples ----
   {
     partNumber: "4452K131",
     name: "Galvanized Steel Pipe Nipple, 1/4 NPT x 1/4 NPT, Close",
@@ -251,6 +449,49 @@ export const CATALOG: Part[] = [
     unitPrice: 2.18,
     mcmasterUrl: mcm("4452K141"),
   },
+
+  // ---- 1/4" NPT barrel nipples (short, hex-bodied) ----
+  {
+    partNumber: "4452K151",
+    name: "Galvanized Steel Barrel Nipple, 1/4 NPT, 1-1/2 in Long",
+    category: "barrel_nipple",
+    threadType: "1/4-NPT",
+    threadSize: "1/4-18 NPT",
+    material: "steel",
+    finish: "galvanized",
+    length: 38,
+    diameter: 16,
+    unitPrice: 2.46,
+    mcmasterUrl: mcm("4452K151"),
+  },
+  {
+    partNumber: "4452K161",
+    name: "Brass Barrel Nipple, 1/4 NPT, 1-1/2 in Long",
+    category: "barrel_nipple",
+    threadType: "1/4-NPT",
+    threadSize: "1/4-18 NPT",
+    material: "brass",
+    finish: "plain",
+    length: 38,
+    diameter: 16,
+    unitPrice: 4.92,
+    mcmasterUrl: mcm("4452K161"),
+  },
+  {
+    partNumber: "4452K171",
+    name: "Galvanized Steel Barrel Nipple, 1/4 NPT, 3 in Long",
+    category: "barrel_nipple",
+    threadType: "1/4-NPT",
+    threadSize: "1/4-18 NPT",
+    material: "steel",
+    finish: "galvanized",
+    length: 76,
+    diameter: 16,
+    unitPrice: 3.18,
+    mcmasterUrl: mcm("4452K171"),
+  },
+
+  // ---- 1/4" NPT couplings ----
   {
     partNumber: "4429K151",
     name: "Galvanized Steel Pipe Coupling, 1/4 NPT",
@@ -264,6 +505,118 @@ export const CATALOG: Part[] = [
     unitPrice: 1.66,
     mcmasterUrl: mcm("4429K151"),
   },
+
+  // ---- 1/4" NPT tees (top, left, right ports) ----
+  {
+    partNumber: "4429K271",
+    name: "Brass Pipe Tee, 1/4 NPT",
+    category: "pipe_tee",
+    threadType: "1/4-NPT",
+    threadSize: "1/4-18 NPT",
+    material: "brass",
+    finish: "plain",
+    height: 28,
+    diameter: 28,
+    unitPrice: 6.84,
+    mcmasterUrl: mcm("4429K271"),
+  },
+  {
+    partNumber: "4429K281",
+    name: "Galvanized Steel Pipe Tee, 1/4 NPT",
+    category: "pipe_tee",
+    threadType: "1/4-NPT",
+    threadSize: "1/4-18 NPT",
+    material: "steel",
+    finish: "galvanized",
+    height: 28,
+    diameter: 28,
+    unitPrice: 3.42,
+    mcmasterUrl: mcm("4429K281"),
+  },
+  {
+    partNumber: "4429K291",
+    name: "304 Stainless Steel Pipe Tee, 1/4 NPT",
+    category: "pipe_tee",
+    threadType: "1/4-NPT",
+    threadSize: "1/4-18 NPT",
+    material: "stainless",
+    finish: "passivated",
+    height: 28,
+    diameter: 28,
+    unitPrice: 11.84,
+    mcmasterUrl: mcm("4429K291"),
+  },
+
+  // ---- 1/4" NPT 90° elbows ----
+  {
+    partNumber: "4429K321",
+    name: "Brass 90° Elbow, 1/4 NPT",
+    category: "pipe_elbow",
+    threadType: "1/4-NPT",
+    threadSize: "1/4-18 NPT",
+    material: "brass",
+    finish: "plain",
+    height: 24,
+    diameter: 24,
+    unitPrice: 5.42,
+    mcmasterUrl: mcm("4429K321"),
+  },
+  {
+    partNumber: "4429K331",
+    name: "Galvanized Steel 90° Elbow, 1/4 NPT",
+    category: "pipe_elbow",
+    threadType: "1/4-NPT",
+    threadSize: "1/4-18 NPT",
+    material: "steel",
+    finish: "galvanized",
+    height: 24,
+    diameter: 24,
+    unitPrice: 2.18,
+    mcmasterUrl: mcm("4429K331"),
+  },
+  {
+    partNumber: "4429K341",
+    name: "304 Stainless Steel 90° Elbow, 1/4 NPT",
+    category: "pipe_elbow",
+    threadType: "1/4-NPT",
+    threadSize: "1/4-18 NPT",
+    material: "stainless",
+    finish: "passivated",
+    height: 24,
+    diameter: 24,
+    unitPrice: 8.94,
+    mcmasterUrl: mcm("4429K341"),
+  },
+
+  // ---- 1/4" NPT crosses (4-way, rare) ----
+  {
+    partNumber: "4429K411",
+    name: "Galvanized Steel 4-Way Cross, 1/4 NPT",
+    category: "pipe_cross",
+    threadType: "1/4-NPT",
+    threadSize: "1/4-18 NPT",
+    material: "steel",
+    finish: "galvanized",
+    height: 30,
+    diameter: 30,
+    unitPrice: 7.62,
+    mcmasterUrl: mcm("4429K411"),
+  },
+  {
+    partNumber: "4429K421",
+    name: "Brass 4-Way Cross, 1/4 NPT",
+    category: "pipe_cross",
+    threadType: "1/4-NPT",
+    threadSize: "1/4-18 NPT",
+    material: "brass",
+    finish: "plain",
+    height: 30,
+    diameter: 30,
+    unitPrice: 14.86,
+    mcmasterUrl: mcm("4429K421"),
+  },
+
+  // ---- 1/4" NPT pipe caps (terminal) ----
   {
     partNumber: "4452K811",
     name: "Brass Pipe Cap, 1/4 NPT",
@@ -277,6 +630,47 @@ export const CATALOG: Part[] = [
     unitPrice: 4.86,
     mcmasterUrl: mcm("4452K811"),
   },
+  {
+    partNumber: "4452K821",
+    name: "Galvanized Steel Pipe Cap, 1/4 NPT",
+    category: "pipe_cap",
+    threadType: "1/4-NPT",
+    threadSize: "1/4-18 NPT",
+    material: "steel",
+    finish: "galvanized",
+    height: 18,
+    diameter: 20,
+    unitPrice: 2.14,
+    mcmasterUrl: mcm("4452K821"),
+  },
+
+  // ---- 1/4" NPT pipe plugs (terminal — hex/square head insert) ----
+  {
+    partNumber: "4452K711",
+    name: "Brass Hex-Head Pipe Plug, 1/4 NPT",
+    category: "pipe_plug",
+    threadType: "1/4-NPT",
+    threadSize: "1/4-18 NPT",
+    material: "brass",
+    finish: "plain",
+    height: 14,
+    diameter: 17,
+    unitPrice: 3.18,
+    mcmasterUrl: mcm("4452K711"),
+  },
+  {
+    partNumber: "4452K721",
+    name: "Galvanized Steel Square-Head Pipe Plug, 1/4 NPT",
+    category: "pipe_plug",
+    threadType: "1/4-NPT",
+    threadSize: "1/4-18 NPT",
+    material: "steel",
+    finish: "galvanized",
+    height: 14,
+    diameter: 17,
+    unitPrice: 1.62,
+    mcmasterUrl: mcm("4452K721"),
+  },
 ];
 
 export function partsByCategory(
@@ -288,7 +682,6 @@ export function partsByCategory(
   );
 }
 
-export function rodsFor(threadType: Part["threadType"]): Part[] {
-  if (threadType === "M8") return partsByCategory("M8", "threaded_rod");
-  return partsByCategory("1/4-NPT", "pipe_nipple");
+export function partsForThread(threadType: Part["threadType"]): Part[] {
+  return CATALOG.filter((p) => p.threadType === threadType);
 }
