@@ -116,7 +116,7 @@ function Footnote() {
     <p className="px-1 font-mono text-[10px] leading-relaxed text-ink/45">
       Parts shown are real McMaster-Carr-style numbers selected for thread
       compatibility. Always verify part numbers and dimensions on
-      mcmaster.com before ordering. Prices are illustrative.
+      mcmaster.com before ordering.
     </p>
   );
 }

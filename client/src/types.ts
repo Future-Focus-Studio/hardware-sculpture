@@ -41,7 +41,6 @@ export interface Part {
   length?: number;
   height?: number;
   diameter: number;
-  unitPrice: number;
   mcmasterUrl: string;
 }
 
@@ -64,12 +63,10 @@ export interface SculptureChild {
 export interface BomLine {
   partNumber: string;
   name: string;
+  category: Category;
   qty: number;
-  unitPrice: number;
-  subtotal: number;
   material: Material;
   mcmasterUrl: string;
-  priceUrl: string;
 }
 
 export interface Sculpture {
@@ -80,7 +77,6 @@ export interface Sculpture {
   bom: BomLine[];
   totals: {
     partCount: number;
-    totalCost: number;
     spanMm: number;
   };
 }

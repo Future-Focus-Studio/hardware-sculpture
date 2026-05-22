@@ -43,7 +43,6 @@ export interface Part {
   length?: number; // for rods, nipples, eye bolts (along long axis)
   height?: number; // for nuts, fittings (along axis)
   diameter: number; // outer diameter / shortest body dimension
-  unitPrice: number; // USD
   mcmasterUrl: string;
 }
 
@@ -76,7 +75,6 @@ export interface Sculpture {
   bom: BomLine[];
   totals: {
     partCount: number;
-    totalCost: number;
     spanMm: number; // bounding box max dimension
   };
 }
@@ -84,10 +82,8 @@ export interface Sculpture {
 export interface BomLine {
   partNumber: string;
   name: string;
+  category: Category;
   qty: number;
-  unitPrice: number;
-  subtotal: number;
   material: Material;
   mcmasterUrl: string;
-  priceUrl: string;
 }

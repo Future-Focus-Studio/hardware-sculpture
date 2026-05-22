@@ -376,14 +376,12 @@ function buildBom(allParts: Part[]): BomLine[] {
     .map(({ part, qty }) => ({
       partNumber: part.partNumber,
       name: part.name,
+      category: part.category,
       qty,
-      unitPrice: part.unitPrice,
-      subtotal: Math.round(part.unitPrice * qty * 100) / 100,
       material: part.material,
       mcmasterUrl: part.mcmasterUrl,
-      priceUrl: `https://www.mcmaster.com/${part.partNumber}`,
     }))
-    .sort((a, b) => b.subtotal - a.subtotal);
+    .sort((a, b) => b.qty - a.qty || a.partNumber.localeCompare(b.partNumber));
 }
 
 function makeId(): string {
@@ -460,7 +458,6 @@ export function generateSculpture(): Sculpture {
     bom,
     totals: {
       partCount: allParts.length,
-      totalCost: Math.round(bom.reduce((s, l) => s + l.subtotal, 0) * 100) / 100,
       spanMm: Math.round(spanMm),
     },
   };

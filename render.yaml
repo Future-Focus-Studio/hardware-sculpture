@@ -11,6 +11,4 @@ services:
         value: production
       - key: NODE_VERSION
         value: "20"
-      - key: FIRECRAWL_API_KEY
-        value: fc-46ccce0a60d74d499236c8019d155312
     autoDeploy: true

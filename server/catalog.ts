@@ -21,7 +21,6 @@ export const CATALOG: Part[] = [
     finish: "zinc plated",
     length: 100,
     diameter: 8,
-    unitPrice: 1.78,
     mcmasterUrl: mcm("92510A816"),
   },
   {
@@ -34,7 +33,6 @@ export const CATALOG: Part[] = [
     finish: "zinc plated",
     length: 200,
     diameter: 8,
-    unitPrice: 2.42,
     mcmasterUrl: mcm("92510A820"),
   },
   {
@@ -47,7 +45,6 @@ export const CATALOG: Part[] = [
     finish: "zinc plated",
     length: 300,
     diameter: 8,
-    unitPrice: 3.18,
     mcmasterUrl: mcm("92510A824"),
   },
   {
@@ -60,7 +57,6 @@ export const CATALOG: Part[] = [
     finish: "passivated",
     length: 500,
     diameter: 8,
-    unitPrice: 9.84,
     mcmasterUrl: mcm("92510A832"),
   },
   {
@@ -73,7 +69,6 @@ export const CATALOG: Part[] = [
     finish: "passivated",
     length: 1000,
     diameter: 8,
-    unitPrice: 17.42,
     mcmasterUrl: mcm("92510A848"),
   },
 
@@ -88,7 +83,6 @@ export const CATALOG: Part[] = [
     finish: "zinc plated",
     height: 6.5,
     diameter: 13,
-    unitPrice: 0.11,
     mcmasterUrl: mcm("90591A160"),
   },
   {
@@ -101,7 +95,6 @@ export const CATALOG: Part[] = [
     finish: "passivated",
     height: 6.5,
     diameter: 13,
-    unitPrice: 0.34,
     mcmasterUrl: mcm("94895A100"),
   },
   {
@@ -114,7 +107,6 @@ export const CATALOG: Part[] = [
     finish: "black oxide",
     height: 6.5,
     diameter: 13,
-    unitPrice: 0.42,
     mcmasterUrl: mcm("93827A210"),
   },
   {
@@ -127,7 +119,6 @@ export const CATALOG: Part[] = [
     finish: "plain",
     height: 6.5,
     diameter: 13,
-    unitPrice: 0.96,
     mcmasterUrl: mcm("92671A170"),
   },
 
@@ -142,7 +133,6 @@ export const CATALOG: Part[] = [
     finish: "zinc plated",
     height: 24,
     diameter: 13,
-    unitPrice: 0.68,
     mcmasterUrl: mcm("94639A300"),
   },
   {
@@ -155,7 +145,6 @@ export const CATALOG: Part[] = [
     finish: "plain",
     height: 30,
     diameter: 13,
-    unitPrice: 2.84,
     mcmasterUrl: mcm("94639A330"),
   },
   {
@@ -168,7 +157,6 @@ export const CATALOG: Part[] = [
     finish: "passivated",
     height: 40,
     diameter: 13,
-    unitPrice: 3.62,
     mcmasterUrl: mcm("94639A340"),
   },
 
@@ -183,7 +171,6 @@ export const CATALOG: Part[] = [
     finish: "polished",
     height: 12,
     diameter: 13,
-    unitPrice: 1.84,
     mcmasterUrl: mcm("97803A410"),
   },
 
@@ -198,7 +185,6 @@ export const CATALOG: Part[] = [
     finish: "plain",
     height: 10,
     diameter: 12,
-    unitPrice: 1.20,
     mcmasterUrl: mcm("93475A140"),
   },
   {
@@ -211,7 +197,6 @@ export const CATALOG: Part[] = [
     finish: "plain",
     height: 25,
     diameter: 12,
-    unitPrice: 1.86,
     mcmasterUrl: mcm("93475A155"),
   },
   {
@@ -224,7 +209,6 @@ export const CATALOG: Part[] = [
     finish: "passivated",
     height: 50,
     diameter: 12,
-    unitPrice: 4.92,
     mcmasterUrl: mcm("93475A180"),
   },
   {
@@ -237,7 +221,6 @@ export const CATALOG: Part[] = [
     finish: "polished",
     height: 75,
     diameter: 12,
-    unitPrice: 8.40,
     mcmasterUrl: mcm("93475A220"),
   },
   {
@@ -250,7 +233,6 @@ export const CATALOG: Part[] = [
     finish: "polished",
     height: 100,
     diameter: 12,
-    unitPrice: 11.20,
     mcmasterUrl: mcm("93475A260"),
   },
 
@@ -265,7 +247,6 @@ export const CATALOG: Part[] = [
     finish: "plain",
     height: 24, // total visual height incl. head
     diameter: 18, // head diameter
-    unitPrice: 3.42,
     mcmasterUrl: mcm("91746A220"),
   },
   {
@@ -278,7 +259,6 @@ export const CATALOG: Part[] = [
     finish: "polished",
     height: 28,
     diameter: 20,
-    unitPrice: 4.88,
     mcmasterUrl: mcm("91746A230"),
   },
 
@@ -293,7 +273,6 @@ export const CATALOG: Part[] = [
     finish: "zinc plated",
     height: 11,
     diameter: 28, // wing-tip to wing-tip
-    unitPrice: 0.74,
     mcmasterUrl: mcm("90866A110"),
   },
   {
@@ -306,7 +285,6 @@ export const CATALOG: Part[] = [
     finish: "passivated",
     height: 12,
     diameter: 30,
-    unitPrice: 1.96,
     mcmasterUrl: mcm("94895A800"),
   },
 
@@ -321,7 +299,6 @@ export const CATALOG: Part[] = [
     finish: "zinc plated",
     height: 9,
     diameter: 19, // flange OD
-    unitPrice: 0.42,
     mcmasterUrl: mcm("96754A150"),
   },
   {
@@ -334,7 +311,6 @@ export const CATALOG: Part[] = [
     finish: "passivated",
     height: 9,
     diameter: 19,
-    unitPrice: 1.18,
     mcmasterUrl: mcm("96754A160"),
   },
 
@@ -349,7 +325,6 @@ export const CATALOG: Part[] = [
     finish: "zinc plated",
     length: 52, // includes loop
     diameter: 18, // loop OD
-    unitPrice: 1.92,
     mcmasterUrl: mcm("3014T11"),
   },
   {
@@ -362,7 +337,6 @@ export const CATALOG: Part[] = [
     finish: "passivated",
     length: 66,
     diameter: 20,
-    unitPrice: 4.86,
     mcmasterUrl: mcm("3014T21"),
   },
 
@@ -377,7 +351,6 @@ export const CATALOG: Part[] = [
     finish: "zinc plated",
     height: 11,
     diameter: 22, // flange OD
-    unitPrice: 0.36,
     mcmasterUrl: mcm("90975A100"),
   },
   {
@@ -390,7 +363,6 @@ export const CATALOG: Part[] = [
     finish: "passivated",
     height: 11,
     diameter: 22,
-    unitPrice: 1.14,
     mcmasterUrl: mcm("90975A110"),
   },
 
@@ -405,7 +377,6 @@ export const CATALOG: Part[] = [
     finish: "zinc plated",
     height: 4,
     diameter: 13,
-    unitPrice: 0.16,
     mcmasterUrl: mcm("90710A140"),
   },
   {
@@ -418,7 +389,6 @@ export const CATALOG: Part[] = [
     finish: "passivated",
     height: 4,
     diameter: 13,
-    unitPrice: 0.52,
     mcmasterUrl: mcm("90710A150"),
   },
 
@@ -433,7 +403,6 @@ export const CATALOG: Part[] = [
     finish: "galvanized",
     length: 28,
     diameter: 13.7,
-    unitPrice: 1.94,
     mcmasterUrl: mcm("4452K131"),
   },
   {
@@ -446,7 +415,6 @@ export const CATALOG: Part[] = [
     finish: "galvanized",
     length: 51,
     diameter: 13.7,
-    unitPrice: 2.18,
     mcmasterUrl: mcm("4452K141"),
   },
 
@@ -461,7 +429,6 @@ export const CATALOG: Part[] = [
     finish: "galvanized",
     length: 38,
     diameter: 16,
-    unitPrice: 2.46,
     mcmasterUrl: mcm("4452K151"),
   },
   {
@@ -474,7 +441,6 @@ export const CATALOG: Part[] = [
     finish: "plain",
     length: 38,
     diameter: 16,
-    unitPrice: 4.92,
     mcmasterUrl: mcm("4452K161"),
   },
   {
@@ -487,7 +453,6 @@ export const CATALOG: Part[] = [
     finish: "galvanized",
     length: 76,
     diameter: 16,
-    unitPrice: 3.18,
     mcmasterUrl: mcm("4452K171"),
   },
 
@@ -502,7 +467,6 @@ export const CATALOG: Part[] = [
     finish: "galvanized",
     height: 26,
     diameter: 19,
-    unitPrice: 1.66,
     mcmasterUrl: mcm("4429K151"),
   },
 
@@ -517,7 +481,6 @@ export const CATALOG: Part[] = [
     finish: "plain",
     height: 28,
     diameter: 28,
-    unitPrice: 6.84,
     mcmasterUrl: mcm("4429K271"),
   },
   {
@@ -530,7 +493,6 @@ export const CATALOG: Part[] = [
     finish: "galvanized",
     height: 28,
     diameter: 28,
-    unitPrice: 3.42,
     mcmasterUrl: mcm("4429K281"),
   },
   {
@@ -543,7 +505,6 @@ export const CATALOG: Part[] = [
     finish: "passivated",
     height: 28,
     diameter: 28,
-    unitPrice: 11.84,
     mcmasterUrl: mcm("4429K291"),
   },
 
@@ -558,7 +519,6 @@ export const CATALOG: Part[] = [
     finish: "plain",
     height: 24,
     diameter: 24,
-    unitPrice: 5.42,
     mcmasterUrl: mcm("4429K321"),
   },
   {
@@ -571,7 +531,6 @@ export const CATALOG: Part[] = [
     finish: "galvanized",
     height: 24,
     diameter: 24,
-    unitPrice: 2.18,
     mcmasterUrl: mcm("4429K331"),
   },
   {
@@ -584,7 +543,6 @@ export const CATALOG: Part[] = [
     finish: "passivated",
     height: 24,
     diameter: 24,
-    unitPrice: 8.94,
     mcmasterUrl: mcm("4429K341"),
   },
 
@@ -599,7 +557,6 @@ export const CATALOG: Part[] = [
     finish: "galvanized",
     height: 30,
     diameter: 30,
-    unitPrice: 7.62,
     mcmasterUrl: mcm("4429K411"),
   },
   {
@@ -612,7 +569,6 @@ export const CATALOG: Part[] = [
     finish: "plain",
     height: 30,
     diameter: 30,
-    unitPrice: 14.86,
     mcmasterUrl: mcm("4429K421"),
   },
 
@@ -627,7 +583,6 @@ export const CATALOG: Part[] = [
     finish: "plain",
     height: 18,
     diameter: 20,
-    unitPrice: 4.86,
     mcmasterUrl: mcm("4452K811"),
   },
   {
@@ -640,7 +595,6 @@ export const CATALOG: Part[] = [
     finish: "galvanized",
     height: 18,
     diameter: 20,
-    unitPrice: 2.14,
     mcmasterUrl: mcm("4452K821"),
   },
 
@@ -655,7 +609,6 @@ export const CATALOG: Part[] = [
     finish: "plain",
     height: 14,
     diameter: 17,
-    unitPrice: 3.18,
     mcmasterUrl: mcm("4452K711"),
   },
   {
@@ -668,7 +621,6 @@ export const CATALOG: Part[] = [
     finish: "galvanized",
     height: 14,
     diameter: 17,
-    unitPrice: 1.62,
     mcmasterUrl: mcm("4452K721"),
   },
 ];
